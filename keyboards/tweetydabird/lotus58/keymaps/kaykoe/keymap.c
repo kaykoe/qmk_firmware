@@ -8,87 +8,98 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // base layer
     [0] = LAYOUT(
-               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX,         KC_MPLY,      KC_MPLY,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX,
-                KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,          KC_B,                                         KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,         KC_BSLS,
-        LCTL_T(KC_ESC),    KC_A,    KC_R,    KC_S,    KC_T,          KC_G,                                         KC_K,    KC_N,    KC_E,    KC_I,    KC_O, RCTL_T(KC_QUOT),
-               KC_LGUI,    KC_Z,    KC_X,    KC_C,    KC_D,          KC_V,      SGUI(KC_A),      KC_CAPS,          KC_M,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,         KC_MINS,
-                                            TG(3), KC_LALT,  LT(6,KC_DEL), LSFT_T(KC_BSPC),       KC_SPC,  LT(5,KC_ENT), KC_RALT,   MO(4)
+               XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,       KC_MPLY,                  KC_MPLY,       XXXXXXX,              XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX, XXXXXXX,
+               XXXXXXX,        KC_Q,        KC_W,           KC_F,           KC_P,           KC_B,                                                   KC_J,                 KC_L,        KC_U,        KC_Y,     KC_QUOT, XXXXXXX,
+               XXXXXXX, GUI_T(KC_A), ALT_T(KC_R),    CTL_T(KC_S),    SFT_T(KC_T),           KC_G,                                                   KC_K,          SFT_T(KC_N), CTL_T(KC_E), ALT_T(KC_I), GUI_T(KC_O), XXXXXXX,
+               XXXXXXX,        KC_Z,        KC_X,           KC_C,           KC_D,           KC_V,       XXXXXXX,                  XXXXXXX,          KC_M,                 KC_H,     KC_COMM,      KC_DOT,     KC_SLSH, XXXXXXX,
+                                                         XXXXXXX,  LT(2, KC_ESC), LT(3, KC_BSPC), LT(4, KC_TAB),            LT(5, KC_ENT), LT(6, KC_SPC), LT(7, OSM(MOD_RALT)),     XXXXXXX
     ),
 
-// gaming layer
+// extra layer
     [1] = LAYOUT(
-         KC_ESC,   KC_1,   KC_2,   KC_3,    KC_4,   KC_5,    KC_TRNS,       KC_TRNS,    KC_6,    KC_7,         KC_8,    KC_9,    KC_0,   TG(2),
-         KC_TAB,   KC_Q,   KC_W,   KC_E,    KC_R,   KC_T,                               KC_Y,    KC_U,         KC_I,    KC_O,    KC_P,  KC_ENT,
-        KC_LSFT,   KC_A,   KC_S,   KC_D,    KC_F,   KC_G,                               KC_H,    KC_J,         KC_K,    KC_L, KC_SCLN, KC_RSFT,
-        KC_LCTL,   KC_Z,   KC_X,   KC_C,    KC_V,   KC_B, SGUI(KC_A),       KC_CAPS,    KC_N,    KC_M,      KC_COMM,  KC_DOT, KC_SLSH, KC_RCTL,
-                                KC_LGUI, KC_LALT, KC_DEL,     KC_SPC,       KC_BSPC,  KC_ENT, KC_RALT, LALT(KC_TAB)
+               XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,       KC_MPLY,                  KC_MPLY,       XXXXXXX,              XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX, XXXXXXX,
+               XXXXXXX,        KC_Q,        KC_W,           KC_E,           KC_R,           KC_T,                                                   KC_Y,                 KC_U,        KC_I,        KC_O,           KC_P, XXXXXXX,
+               XXXXXXX, GUI_T(KC_A), ALT_T(KC_S),    CTL_T(KC_D),    SFT_T(KC_F),           KC_G,                                                   KC_H,          SFT_T(KC_J), CTL_T(KC_K), ALT_T(KC_L), GUI_T(KC_QUOT), XXXXXXX,
+               XXXXXXX,        KC_Z,        KC_X,           KC_C,           KC_V,           KC_B,       XXXXXXX,                  XXXXXXX,          KC_N,                 KC_M,     KC_COMM,      KC_DOT,        KC_SLSH, XXXXXXX,
+                                                         XXXXXXX,  LT(2, KC_ESC), LT(3, KC_BSPC), LT(4, KC_TAB),            LT(5, KC_ENT), LT(6, KC_SPC), LT(7, OSM(MOD_RALT)),     XXXXXXX
     ),
 
-// settings layer
+// function layer
     [2] = LAYOUT(
-        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,      KC_TRNS, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   TG(2),
-         QK_RBT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        DB_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,      KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, QK_BOOT, AC_TOGG,   TO(1),   TO(0), XXXXXXX,                        KC_BRIU,   KC_F7,   KC_F8,   KC_F9,  KC_F12, XXXXXXX,
+        XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                         KC_NUM,   KC_F4,   KC_F5,   KC_F6,  KC_F11, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX,   TO(7),   TO(2), XXXXXXX, XXXXXXX,      XXXXXXX, KC_BRID,   KC_F1,   KC_F2,   KC_F3,  KC_F10, XXXXXXX,
+                                   XXXXXXX, KC_TRNS, XXXXXXX, XXXXXXX,       KC_ENT,  KC_SPC, KC_PSCR, XXXXXXX
+    ),
+
+// number layer
+    [3] = LAYOUT(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,      KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, QK_BOOT, AC_TOGG,   TO(1),   TO(0), XXXXXXX,                         KC_GRV,    KC_7,    KC_8,    KC_9, KC_SCLN, XXXXXXX,
+        XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                        KC_LBRC,    KC_4,    KC_5,    KC_6, KC_RBRC, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX,   TO(6),   TO(3), XXXXXXX, XXXXXXX,      XXXXXXX, KC_BSLS,    KC_1,    KC_2,    KC_3,  KC_EQL, XXXXXXX,
+                                   XXXXXXX, XXXXXXX, KC_TRNS, XXXXXXX,      KC_MINS, KC_PDOT,    KC_0, XXXXXXX
+    ),
+
+// symbol layer
+    [4] = LAYOUT(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, QK_BOOT, AC_TOGG,   TO(1),   TO(0), XXXXXXX,                          KC_TILD, KC_AMPR, KC_ASTR, KC_LPRN, KC_COLN, XXXXXXX,
+        XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                          KC_LCBR,  KC_DLR, KC_PERC, KC_CIRC, KC_RCBR, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX,   TO(5),   TO(4), XXXXXXX, XXXXXXX,        XXXXXXX, KC_PIPE, KC_EXLM,   KC_AT, KC_HASH, KC_PLUS, XXXXXXX,
+                                   XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,        KC_UNDS, KC_LPRN, KC_RPRN, XXXXXXX
+    ),
+
+// media layer
+    [5] = LAYOUT(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, KC_TRNS,        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, KC_BRIU, KC_MPRV, KC_VOLU,    KC_MNXT, XXXXXXX,                          XXXXXXX,   TO(0),   TO(1), AC_TOGG, QK_BOOT, XXXXXXX,
+        XXXXXXX, KC_BRID, KC_WBAK, KC_VOLD,    KC_WFWD, XXXXXXX,                          XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
+        XXXXXXX, XXXXXXX, KC_MRWD, KC_MSTP,    KC_MFFD, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX,   TO(5),   TO(4), XXXXXXX, XXXXXXX, XXXXXXX,
+                                   XXXXXXX, SGUI(KC_A), KC_MPLY, KC_MUTE,        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX
+    ),
+
+// navigation layer
+    [6] = LAYOUT(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, KC_PGUP, KC_HOME,   KC_UP,  KC_END, XXXXXXX,                            XXXXXXX,   TO(0),   TO(1), AC_TOGG, QK_BOOT, XXXXXXX,
+        XXXXXXX, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_CAPS,                            XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
+        XXXXXXX, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_Y), XXXXXXX,          XXXXXXX, XXXXXXX,   TO(6),   TO(3), XXXXXXX, XXXXXXX, XXXXXXX,
+                                   XXXXXXX,  KC_ESC, KC_BSPC,  KC_APP,          XXXXXXX, KC_TRNS, XXXXXXX, XXXXXXX
     ),
 
 // mouse layer
-    [3] = LAYOUT(
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX,                          XXXXXXX, XXXXXXX, KC_WH_U, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                          XXXXXXX, KC_WH_L, KC_WH_D, KC_WH_R, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                     TG(3), XXXXXXX, XXXXXXX, KC_BTN1,        KC_BTN2, XXXXXXX, XXXXXXX, MO(4)
-    ),
-
-// fn layer
-    [4] = LAYOUT(
-               XXXXXXX, XXXXXXX,       XXXXXXX,       XXXXXXX,         XXXXXXX,      XXXXXXX,         KC_MUTE,               KC_TRNS,      XXXXXXX,          KC_F10,  KC_F11,  KC_F12, XXXXXXX,         XXXXXXX,
-                KC_TAB, XXXXXXX, LSFT(KC_PGUP),   LSFT(KC_UP),    LSFT(KC_END),      XXXXXXX,                                              XXXXXXX,           KC_F7,   KC_F8,   KC_F9, XXXXXXX,         XXXXXXX,
-        LCTL_T(KC_ESC), KC_WBAK, LSFT(KC_LEFT), LSFT(KC_DOWN),  LSFT(KC_RIGHT),      KC_WFWD,                                              XXXXXXX,           KC_F4,   KC_F5,   KC_F6, XXXXXXX, RCTL_T(KC_QUOT),
-               KC_LGUI, KC_BRID, LSFT(KC_HOME),       KC_PSCR,   LSFT(KC_PGDN),      KC_BRIU,      SGUI(KC_A),               KC_CAPS,      XXXXXXX,           KC_F1,   KC_F2,   KC_F3, XXXXXXX,         XXXXXXX,
-                                                        TG(3),         KC_LALT, LT(6,KC_DEL), LSFT_T(KC_BSPC),        KC_SPC, LT(5,KC_ENT), KC_RALT,  MO(4)
-    ),
-
-//symbol layer
-    [5] = LAYOUT(
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR,  KC_EQL, KC_SCLN, KC_BSLS,
-        KC_TRNS, KC_PMNS, KC_LBRC, KC_LCBR, KC_LPRN, XXXXXXX,                            XXXXXXX, KC_RPRN, KC_RCBR, KC_RBRC, KC_PPLS,  KC_ENT,
-        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          KC_TRNS, XXXXXXX, XXXXXXX,   KC_LT,   KC_GT, KC_PSLS, XXXXXXX,
-                                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
-    ),
-
-// numpad / arrow layer
-    [6] = LAYOUT(
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, KC_TRNS,         KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-         KC_TAB, XXXXXXX, KC_HOME,   KC_UP,   KC_END, XXXXXXX,                           KC_PMNS,   KC_P7,   KC_P8,   KC_P9, KC_PPLS, KC_NUM,
-        KC_TRNS, KC_PGUP, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX,                           KC_PDOT,   KC_P4,   KC_P5,   KC_P6, KC_PAST, KC_TRNS,
-        KC_TRNS, KC_PGDN, XXXXXXX,  KC_APP,  XXXXXXX, XXXXXXX, KC_TRNS,         KC_TRNS,   KC_P0,   KC_P1,   KC_P2,   KC_P3, KC_PSLS, XXXXXXX,
-                                   KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+    [7] = LAYOUT(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,         KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, MS_WHLU, MS_WHLL,   MS_UP, MS_WHLR, XXXXXXX,                           XXXXXXX,   TO(0),   TO(1), AC_TOGG, QK_BOOT, XXXXXXX,
+        XXXXXXX, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX,                           XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
+        XXXXXXX, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_Y), XXXXXXX,         XXXXXXX, XXXXXXX,   TO(7),   TO(2), XXXXXXX, XXXXXXX, XXXXXXX,
+                                   XXXXXXX, MS_BTN3, MS_BTN1, MS_BTN2,         XXXXXXX, XXXXXXX, KC_TRNS, XXXXXXX
     )
 };
 
-const uint16_t PROGMEM COMBO_TG1[] = {SGUI(KC_A), KC_CAPS, COMBO_END};
-const uint16_t PROGMEM COMBO_CAPS_WORD_TOGG[] = {LSFT_T(KC_BSPC), KC_SPC, COMBO_END};
-const uint16_t PROGMEM COMBO_NUM_LAYER[] = {LT(5, KC_ENT), LT(6, KC_DEL), COMBO_END};
+const uint16_t PROGMEM COMBO_CAPS_WORD_TOGG[] = {LSFT_T(KC_T), LSFT_T(KC_N),  COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(COMBO_CAPS_WORD_TOGG, CW_TOGG),
-    COMBO(COMBO_TG1, TG(1)),
-    COMBO(COMBO_NUM_LAYER, TG(6)),
 };
+const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, LT(3, KC_BSPC), KC_DEL);
 
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {
+	&delete_key_override
+};
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [1] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
     [2] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
     [3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
-    [4] = { ENCODER_CCW_CW(KC_LEFT, KC_RIGHT), ENCODER_CCW_CW(KC_LEFT, KC_RIGHT) },
+    [4] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
     [5] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [6] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [7] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
 };
 #endif
 
@@ -171,20 +182,24 @@ static void print_status_narrow(void) {
             oled_write_P(PSTR("QWERT\n"), false);
             break;
         case 2:
-            oled_clear();
-            oled_write_P(PSTR("-Sys \n"), false);
-            break;
-        case 3:
-            oled_write_raw_P(MOUSE_LAYER, sizeof(MOUSE_LAYER));
-            break;
-        case 4:
             oled_write_raw_P(FN_LAYER, sizeof(FN_LAYER));
             break;
-        case 5:
+        case 3:
+            oled_write_raw_P(NUM_LAYER, sizeof(NUM_LAYER));
+            break;
+        case 4:
             oled_write_raw_P(SYMBOL_LAYER, sizeof(SYMBOL_LAYER));
             break;
+        case 5:
+            oled_clear();
+            oled_write_P(PSTR("MEDIA\n"), false);
+            break;
         case 6:
-            oled_write_raw_P(NUM_LAYER, sizeof(NUM_LAYER));
+            oled_clear();
+            oled_write_P(PSTR(" NAV \n"), false);
+            break;
+        case 7:
+            oled_write_raw_P(MOUSE_LAYER, sizeof(MOUSE_LAYER));
             break;
         default:
             oled_write_P(PSTR("Undef\n"), false);
