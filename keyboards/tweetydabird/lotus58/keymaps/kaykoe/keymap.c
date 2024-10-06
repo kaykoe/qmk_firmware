@@ -8,11 +8,11 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // base layer
     [0] = LAYOUT(
-                KC_GRV,   KC_1,   KC_2,    KC_3,    KC_4,          KC_5,         KC_MPLY,              KC_MPLY,          KC_6,            KC_7,    KC_8,   KC_9,    KC_0,         KC_MINS,
-                KC_TAB,   KC_Q,   KC_W,    KC_F,    KC_P,          KC_B,                                                 KC_J,            KC_L,    KC_U,   KC_Y, KC_SCLN,         KC_BSLS,
-        LCTL_T(KC_ESC),   KC_A,   KC_R,    KC_S,    KC_T,          KC_G,                                                 KC_K,            KC_N,    KC_E,   KC_I,    KC_O, RCTL_T(KC_QUOT),
-               KC_LGUI,   KC_Z,   KC_X,    KC_C,    KC_D,          KC_V,      SGUI(KC_A),              KC_CAPS,          KC_M,            KC_H, KC_COMM, KC_DOT, KC_SLSH,          KC_EQL,
-                                          TG(3), KC_LALT,  LT(6,KC_DEL), LSFT_T(KC_BSPC),       KC_SPC,  LT(5,KC_ENT), KC_RALT,   MO(4)
+               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX,         KC_MPLY,      KC_MPLY,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX,
+                KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,          KC_B,                                         KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,         KC_BSLS,
+        LCTL_T(KC_ESC),    KC_A,    KC_R,    KC_S,    KC_T,          KC_G,                                         KC_K,    KC_N,    KC_E,    KC_I,    KC_O, RCTL_T(KC_QUOT),
+               KC_LGUI,    KC_Z,    KC_X,    KC_C,    KC_D,          KC_V,      SGUI(KC_A),      KC_CAPS,          KC_M,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,         KC_MINS,
+                                            TG(3), KC_LALT,  LT(6,KC_DEL), LSFT_T(KC_BSPC),       KC_SPC,  LT(5,KC_ENT), KC_RALT,   MO(4)
     ),
 
 // gaming layer
@@ -21,12 +21,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_TAB,   KC_Q,   KC_W,   KC_E,    KC_R,   KC_T,                               KC_Y,    KC_U,         KC_I,    KC_O,    KC_P,  KC_ENT,
         KC_LSFT,   KC_A,   KC_S,   KC_D,    KC_F,   KC_G,                               KC_H,    KC_J,         KC_K,    KC_L, KC_SCLN, KC_RSFT,
         KC_LCTL,   KC_Z,   KC_X,   KC_C,    KC_V,   KC_B, SGUI(KC_A),       KC_CAPS,    KC_N,    KC_M,      KC_COMM,  KC_DOT, KC_SLSH, KC_RCTL,
-                                KC_LGUI, KC_LALT, KC_ENT,     KC_SPC,       KC_BSPC,  KC_DEL, KC_RALT, LALT(KC_TAB)
+                                KC_LGUI, KC_LALT, KC_DEL,     KC_SPC,       KC_BSPC,  KC_ENT, KC_RALT, LALT(KC_TAB)
     ),
 
 // settings layer
     [2] = LAYOUT(
-        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, NK_TOGG, XXXXXXX, KC_TRNS,      KC_TRNS, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   TG(2),
+        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,      KC_TRNS, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   TG(2),
          QK_RBT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         DB_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -54,25 +54,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //symbol layer
     [5] = LAYOUT(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        KC_TRNS, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR, XXXXXXX,  KC_UNDS, KC_EQL,
-        KC_TRNS, KC_PMNS, KC_LBRC, KC_LCBR, KC_LPRN,   KC_LT,                              KC_GT, KC_RPRN, KC_RCBR, KC_RBRC, KC_PPLS, KC_TRNS,
-        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR,  KC_EQL, KC_SCLN, KC_BSLS,
+        KC_TRNS, KC_PMNS, KC_LBRC, KC_LCBR, KC_LPRN, XXXXXXX,                            XXXXXXX, KC_RPRN, KC_RCBR, KC_RBRC, KC_PPLS,  KC_ENT,
+        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          KC_TRNS, XXXXXXX, XXXXXXX,   KC_LT,   KC_GT, KC_PSLS, XXXXXXX,
                                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
 // numpad / arrow layer
     [6] = LAYOUT(
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, KC_TRNS,         KC_TRNS, XXXXXXX,  KC_NUM, KC_PSLS, KC_PAST, XXXXXXX, XXXXXXX,
-        KC_TRNS, XXXXXXX, KC_PGUP,   KC_UP,   KC_END, XXXXXXX,                           XXXXXXX,   KC_P7,   KC_P8,   KC_P9, KC_PMNS, XXXXXXX,
-        KC_TRNS, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX,                           KC_PDOT,   KC_P4,   KC_P5,   KC_P6, KC_PPLS, KC_TRNS,
-        KC_TRNS, XXXXXXX, KC_HOME,  KC_APP,  KC_PGDN, XXXXXXX, KC_TRNS,         KC_TRNS,   KC_P0,   KC_P1,   KC_P2,   KC_P3, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, KC_TRNS,         KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         KC_TAB, XXXXXXX, KC_HOME,   KC_UP,   KC_END, XXXXXXX,                           KC_PMNS,   KC_P7,   KC_P8,   KC_P9, KC_PPLS, KC_NUM,
+        KC_TRNS, KC_PGUP, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX,                           KC_PDOT,   KC_P4,   KC_P5,   KC_P6, KC_PAST, KC_TRNS,
+        KC_TRNS, KC_PGDN, XXXXXXX,  KC_APP,  XXXXXXX, XXXXXXX, KC_TRNS,         KC_TRNS,   KC_P0,   KC_P1,   KC_P2,   KC_P3, KC_PSLS, XXXXXXX,
                                    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     )
 };
 
 const uint16_t PROGMEM COMBO_TG1[] = {SGUI(KC_A), KC_CAPS, COMBO_END};
 const uint16_t PROGMEM COMBO_CAPS_WORD_TOGG[] = {LSFT_T(KC_BSPC), KC_SPC, COMBO_END};
-const uint16_t PROGMEM COMBO_NUM_LAYER[] = {TG(3), MO(4), COMBO_END};
+const uint16_t PROGMEM COMBO_NUM_LAYER[] = {LT(5, KC_ENT), LT(6, KC_DEL), COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(COMBO_CAPS_WORD_TOGG, CW_TOGG),
