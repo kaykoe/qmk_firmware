@@ -2,26 +2,27 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include <stdint.h>
 #include <sys/types.h>
+#include "features/achordion.h"
 #include "config.h"
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // base layer
     [0] = LAYOUT(
-               XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,       KC_MPLY,                  KC_MPLY,       XXXXXXX,              XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX, XXXXXXX,
-               XXXXXXX,        KC_Q,        KC_W,           KC_F,           KC_P,           KC_B,                                                   KC_J,                 KC_L,        KC_U,        KC_Y,     KC_QUOT, XXXXXXX,
-               XXXXXXX, GUI_T(KC_A), ALT_T(KC_R),    CTL_T(KC_S),    SFT_T(KC_T),           KC_G,                                                   KC_K,          SFT_T(KC_N), CTL_T(KC_E), ALT_T(KC_I), GUI_T(KC_O), XXXXXXX,
-               XXXXXXX,        KC_Z,        KC_X,           KC_C,           KC_D,           KC_V,       XXXXXXX,                  XXXXXXX,          KC_M,                 KC_H,     KC_COMM,      KC_DOT,     KC_SLSH, XXXXXXX,
-                                                         XXXXXXX,  LT(2, KC_ESC), LT(3, KC_BSPC), LT(4, KC_TAB),            LT(5, KC_ENT), LT(6, KC_SPC), LT(7, OSM(MOD_RALT)),     XXXXXXX
+               XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,       XXXXXXX,        XXXXXXX,       KC_MPLY,                  KC_MPLY,       XXXXXXX,       XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX, XXXXXXX,
+               XXXXXXX,        KC_Q,        KC_W,        KC_F,          KC_P,           KC_B,                                                   KC_J,          KC_L,        KC_U,        KC_Y,     KC_QUOT, XXXXXXX,
+               XXXXXXX, GUI_T(KC_A), ALT_T(KC_R), CTL_T(KC_S),   SFT_T(KC_T),           KC_G,                                                   KC_K,   SFT_T(KC_N), CTL_T(KC_E), ALT_T(KC_I), GUI_T(KC_O), XXXXXXX,
+               XXXXXXX,        KC_Z,        KC_X,        KC_C,  RALT_T(KC_D),           KC_V,       XXXXXXX,                  XXXXXXX,          KC_M,  RALT_T(KC_H),     KC_COMM,      KC_DOT,     KC_SLSH, XXXXXXX,
+                                                      XXXXXXX, LT(2, KC_ESC), LT(3, KC_BSPC), LT(4, KC_TAB),            LT(5, KC_ENT), LT(6, KC_SPC), LT(7, KC_DEL),     XXXXXXX
     ),
 
 // extra layer
     [1] = LAYOUT(
-               XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,       KC_MPLY,                  KC_MPLY,       XXXXXXX,              XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX, XXXXXXX,
-               XXXXXXX,        KC_Q,        KC_W,           KC_E,           KC_R,           KC_T,                                                   KC_Y,                 KC_U,        KC_I,        KC_O,           KC_P, XXXXXXX,
-               XXXXXXX, GUI_T(KC_A), ALT_T(KC_S),    CTL_T(KC_D),    SFT_T(KC_F),           KC_G,                                                   KC_H,          SFT_T(KC_J), CTL_T(KC_K), ALT_T(KC_L), GUI_T(KC_QUOT), XXXXXXX,
-               XXXXXXX,        KC_Z,        KC_X,           KC_C,           KC_V,           KC_B,       XXXXXXX,                  XXXXXXX,          KC_N,                 KC_M,     KC_COMM,      KC_DOT,        KC_SLSH, XXXXXXX,
-                                                         XXXXXXX,  LT(2, KC_ESC), LT(3, KC_BSPC), LT(4, KC_TAB),            LT(5, KC_ENT), LT(6, KC_SPC), LT(7, OSM(MOD_RALT)),     XXXXXXX
+               XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,       XXXXXXX,        XXXXXXX,       KC_MPLY,                  KC_MPLY,       XXXXXXX,      XXXXXXX,     XXXXXXX,     XXXXXXX,        XXXXXXX, XXXXXXX,
+               XXXXXXX,        KC_Q,        KC_W,        KC_E,          KC_R,           KC_T,                                                   KC_Y,         KC_U,        KC_I,        KC_O,           KC_P, XXXXXXX,
+               XXXXXXX, GUI_T(KC_A), ALT_T(KC_S), CTL_T(KC_D),   SFT_T(KC_F),           KC_G,                                                   KC_H,  SFT_T(KC_J), CTL_T(KC_K), ALT_T(KC_L), GUI_T(KC_QUOT), XXXXXXX,
+               XXXXXXX,        KC_Z,        KC_X,        KC_C,  RALT_T(KC_V),           KC_B,       XXXXXXX,                  XXXXXXX,          KC_N, RALT_T(KC_M),     KC_COMM,      KC_DOT,        KC_SLSH, XXXXXXX,
+                                                      XXXXXXX, LT(2, KC_ESC), LT(3, KC_BSPC), LT(4, KC_TAB),            LT(5, KC_ENT), LT(6, KC_SPC), LT(7,KC_DEL),     XXXXXXX
     ),
 
 // function layer
@@ -56,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, KC_TRNS,        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, KC_BRIU, KC_MPRV, KC_VOLU,    KC_MNXT, XXXXXXX,                          XXXXXXX,   TO(0),   TO(1), AC_TOGG, QK_BOOT, XXXXXXX,
         XXXXXXX, KC_BRID, KC_WBAK, KC_VOLD,    KC_WFWD, XXXXXXX,                          XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
-        XXXXXXX, XXXXXXX, KC_MRWD, KC_MSTP,    KC_MFFD, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX,   TO(5),   TO(4), XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, KC_MRWD, XXXXXXX,    KC_MFFD, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX,   TO(5),   TO(4), XXXXXXX, XXXXXXX, XXXXXXX,
                                    XXXXXXX, SGUI(KC_A), KC_MPLY, KC_MUTE,        KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
@@ -84,12 +85,25 @@ const uint16_t PROGMEM COMBO_CAPS_WORD_TOGG[] = {LSFT_T(KC_T), LSFT_T(KC_N),  CO
 combo_t key_combos[] = {
     COMBO(COMBO_CAPS_WORD_TOGG, CW_TOGG),
 };
-const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, LT(3, KC_BSPC), KC_DEL);
 
-// This globally defines all key overrides to be used
-const key_override_t *key_overrides[] = {
-	&delete_key_override
-};
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    if (!process_achordion(keycode, record)) { return false; }
+    return true;
+}
+
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
+    switch (keycode) {
+        case LT(3, KC_BSPC):
+            return QUICK_TAP_TERM;
+        default:
+            return 0;
+    }
+}
+
+void matrix_scan_user(void) {
+    achordion_task();
+}
+
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
