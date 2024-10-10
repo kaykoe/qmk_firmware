@@ -91,12 +91,43 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     return true;
 }
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
+    switch (keycode) {
+        case LT(2, KC_ESC):
+        case LT(3, KC_BSPC):
+        case LT(4, KC_TAB):
+        case LT(5, KC_ENT):
+        case LT(6, KC_SPC):
+        case LT(7, KC_DEL):
+            return TAPPING_TERM + 30;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
     switch (keycode) {
         case LT(3, KC_BSPC):
             return QUICK_TAP_TERM;
         default:
             return 0;
+    }
+}
+
+bool achordion_chord(uint16_t tap_hold_keycode,
+                     keyrecord_t* tap_hold_record,
+                     uint16_t other_keycode,
+                     keyrecord_t* other_record) {
+    switch (tap_hold_keycode) {
+        case LT(2, KC_ESC):
+        case LT(3, KC_BSPC):
+        case LT(4, KC_TAB):
+        case LT(5, KC_ENT):
+        case LT(6, KC_SPC):
+        case LT(7, KC_DEL):
+            return true;
+        default:
+            return achordion_opposite_hands(tap_hold_record, other_record);
     }
 }
 
